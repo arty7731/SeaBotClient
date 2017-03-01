@@ -1,0 +1,50 @@
+﻿<Window x:Class="SeaBattleClientWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeaBattleClientWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="625">
+    <DockPanel>
+        <!--Navigation-->
+        <StackPanel DockPanel.Dock="Top">
+        <Button Name="btnStartGame" Click="btnStartGame_Click" Visibility="Collapsed">Start Game</Button>
+        <Button Name="btnConnect" Click="btnConnect_Click">Connect to server</Button>
+            <!--<Label Name="lblWalk" Visibility="Collapsed"  >Walk:</Label>
+            <Label Name="lblWinner" Visibility="Collapsed" >Winner:</Label>-->
+            <WrapPanel>
+                <Label>Host:</Label>
+                <TextBox Name="tbHost">88.99.171.92</TextBox>
+                <Label>Port:</Label>
+                <TextBox Name="tbPort">11000</TextBox>
+                <Label>Battles:</Label>
+                <TextBox Name="tbBattles">1</TextBox>
+                <Label>Mail:</Label>
+                <TextBox Name="tbMail">mail@gmail.com</TextBox>
+            </WrapPanel>
+
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="8*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <!--Player field-->
+            <Grid Margin="15 15" Name="gPlayerField" Grid.Column="0" Grid.Row="1">
+
+            </Grid>
+            <!--Enemy field-->
+            <Grid Margin="15 15" Name="gEnemyField" Grid.Column="2" Grid.Row="1">
+
+            </Grid>
+        </Grid>
+    </DockPanel>
+    
+</Window>
